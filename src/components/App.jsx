@@ -7,6 +7,7 @@ import {
 import Layout from './Page/Layout.jsx';
 import './Design.css';
 import ShoppingListPage from './Page/ShoppingListPage.jsx';
+import TimelinePage from './Page/TimelinePage.jsx';
 
 export default function App() {
 
