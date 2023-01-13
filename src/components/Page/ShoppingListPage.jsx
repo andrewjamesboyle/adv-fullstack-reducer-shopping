@@ -1,5 +1,9 @@
 export default function ShoppingListPage() {
-  return <section>
-    <h1>My Shopping List</h1>
-  </section>;
+  const groceryList = [
+    { id: 1, body: 'bananas' },
+  ];
+  
+  return <>
+    <ShoppingList groceryList={groceryList} />
+  </>;
 }
