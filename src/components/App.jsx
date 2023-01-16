@@ -7,7 +7,6 @@ import {
 import Layout from './Page/Layout.jsx';
 import './Design.css';
 import ShoppingListPage from './Page/ShoppingListPage.jsx';
-import TimelinePage from './Page/TimelinePage.jsx';
 
 export default function App() {
 
@@ -16,7 +15,6 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<ShoppingListPage />} />
-          <Route path="/timeline" element={<TimelinePage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
