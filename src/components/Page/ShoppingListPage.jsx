@@ -1,11 +1,12 @@
+import { useContext } from 'react';
 import ShoppingList from '../ShoppingList/ShoppingList';
+import { Context } from '../ShoppingListProvider';
 
 export default function ShoppingListPage() {
-  const groceryList = [
-    { id: 1, body: 'bananas' },
-  ];
+  // eslint-disable-next-line no-unused-vars
+  const { state, dispatch } = useContext(Context);
   
   return <>
-    <ShoppingList groceryList={groceryList} />
+    <ShoppingList groceryList={state.groceryList} />
   </>;
 }

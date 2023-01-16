@@ -1,4 +1,5 @@
 import { createContext, useReducer } from 'react';
+import { initialState, reducer } from './reducers/shopping-list-reducer';
 
 export const Context = createContext({
   state: initialState(), 
