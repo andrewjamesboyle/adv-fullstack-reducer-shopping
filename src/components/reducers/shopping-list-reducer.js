@@ -1,12 +1,20 @@
 export const initialState = () => {
   return {
-    groceryList: [
+    shoppingList: [
       { id: 1, body: 'bananas' },
     ],
   };
 };
 
-// eslint-disable-next-line no-unused-vars
+
 export const reducer = (state, action) => {
-  return state;
+  switch(action.type) {
+    case 'shopping-list-load-success':
+      return {
+        ...state, 
+        shoppingList: action.shoppingList,
+      };
+    default:
+      return state;
+  }
 };
