@@ -1,10 +1,10 @@
 import ShoppingListItem from './ShoppingListItem';
 
-export default function ShoppingList({ groceryList }) {
+export default function ShoppingList({ shoppingList }) {
   return (
-    <ul>{groceryList.map((grocery) => {
+    <ul>{shoppingList.map((item) => {
       return (
-        <li key={grocery.id}><ShoppingListItem grocery={grocery} /></li>
+        <li key={item.id}><ShoppingListItem item={item} /></li>
       );
     })}      
     </ul>

@@ -1,7 +1,7 @@
 export const initialState = () => {
   return {
     shoppingList: [
-      { id: 1, body: 'bananas' },
+      { id: 1, item_name: 'bananas' },
     ],
   };
 };

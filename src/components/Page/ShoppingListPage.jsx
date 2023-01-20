@@ -6,17 +6,18 @@ import ShoppingList from '../ShoppingList/ShoppingList';
 import { Context } from '../ShoppingListProvider';
 
 export default function ShoppingListPage() {
-  // eslint-disable-next-line no-unused-vars
+  
   const { state, dispatch } = useContext(Context);
+
   useEffect(() => {
     (async () => {
-      const groceries = await getShoppingListItems();
-      console.log('groceries', groceries);
-      const action = shoppingListLoadSuccessAction(groceries);
+      const shoppingListItems = await getShoppingListItems();
+      const action = shoppingListLoadSuccessAction(shoppingListItems);
       dispatch(action);
-    });
+    })();
   }, []);
+
   return <>
-    <ShoppingList groceryList={state.groceryList} />
+    <ShoppingList shoppingList={state.shoppingList} />
   </>;
 }

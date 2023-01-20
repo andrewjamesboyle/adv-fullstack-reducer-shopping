@@ -1,6 +1,6 @@
-export default function ShoppingListItem({ grocery }) {
+export default function ShoppingListItem({ item }) {
   return <div>
-    {grocery.id}
-    {grocery.body}
+    {item.item_name}
+    {item.quantity}
   </div>;
 }
