@@ -1,8 +1,8 @@
 export const initialState = () => {
   return {
-    shoppingList: [
-      { id: 1, item_name: 'bananas' },
-    ],
+    shoppingList: [],
+    shoppingListCandidateItem: '',
+    shoppingListCandidateQty: '',
   };
 };
 
@@ -13,6 +13,16 @@ export const reducer = (state, action) => {
       return {
         ...state, 
         shoppingList: action.shoppingList,
+      };
+    case 'shopping-list-candidate-item-changed':
+      return {
+        ...state,
+        shoppingListCandidateItem: action.item
+      };
+    case 'shopping-list-candidate-qty':
+      return {
+        ...state,
+        shoppingListCandidateQty: action.quantity
       };
     default:
       return state;
