@@ -2,7 +2,7 @@ export const initialState = () => {
   return {
     shoppingList: [],
     shoppingListCandidateItem: '',
-    shoppingListCandidateQty: '',
+    shoppingListCandidateQty: 0,
   };
 };
 
@@ -19,7 +19,7 @@ export const reducer = (state, action) => {
         ...state,
         shoppingListCandidateItem: action.item
       };
-    case 'shopping-list-candidate-qty':
+    case 'shopping-list-candidate-qty-changed':
       return {
         ...state,
         shoppingListCandidateQty: action.quantity
