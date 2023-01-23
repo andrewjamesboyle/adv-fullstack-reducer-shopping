@@ -3,6 +3,7 @@ import { getShoppingListItems } from '../../services/shopping-list-items';
 // eslint-disable-next-line max-len
 import { shoppingListLoadSuccessAction } from '../Actions/shopping-list-actions';
 import ShoppingList from '../ShoppingList/ShoppingList';
+import ShoppingListForm from '../ShoppingList/ShoppingListForm';
 import { Context } from '../ShoppingListProvider';
 
 export default function ShoppingListPage() {
